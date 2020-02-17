@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>EX03</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="section"></div>
+    </div>
+    <script>
+
+        /* 3º exercício */
+
+        /* Escreva uma função que verifique se o vetor de habilidades passado 
+        possui a habilidade "Javascript" e retorna um booleano true/false caso exista ou não. */
+        function temHabilidade(skills) {
+            let possui = false;
+            
+            skills.forEach(function (element) {
+                if (element === 'Javascript')
+                    possui = true;
+            });
+
+            return possui;
+        }
+
+        var skills = ["Javascript", "ReactJS", "React Native"];
+
+        console.log(temHabilidade(skills)); // true ou false
+
+    </script>
+</body>
+
+</html>

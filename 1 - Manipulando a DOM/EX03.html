@@ -1,0 +1,36 @@
+<!-- 
+    
+3º exercício
+A partir do seguinte vetor: 
+
+var nomes = ["Diego", "Gabriel", "Lucas"];
+
+Preencha uma lista (<ul>) no HTML com estes itens 
+    
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EX03</title>
+</head>
+<body>
+    <div id="container">
+        <ul id="list">
+        </ul>
+    </div>
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        var ul = document.getElementById('list');
+
+        for (nome of nomes) {
+            var node = document.createElement('li');
+            node.textContent = nome;
+            ul.appendChild(node);
+        }
+    </script>
+</body>
+
+</html>

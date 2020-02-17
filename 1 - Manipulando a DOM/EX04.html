@@ -1,0 +1,43 @@
+<!-- 
+    
+4º exercício
+
+Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EX04</title>
+</head>
+<body>
+    <div id="container">
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+        <ul id="list"></ul>
+    </div>
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+
+        var ul = document.getElementById('list');
+
+        function appendNode(nome){
+            var node = document.createElement('li');
+            node.textContent = nome
+            ul.appendChild(node);
+        }
+
+        for (nome of nomes) {
+            appendNode(nome);
+        }
+
+        function adicionar(){
+            appendNode(document.querySelector("#container input").value);
+        }
+    </script>
+</body>
+
+</html>

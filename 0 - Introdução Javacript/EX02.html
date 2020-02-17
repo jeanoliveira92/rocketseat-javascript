@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>EX02</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="section"></div>
+    </div>
+    <script>
+
+        /* 2º exercício */
+
+        /* Crie uma função que dado um intervalo (entre x e y) exiba todos número pares: */
+        function pares(x, y) {
+            let pares = [];
+            for(;x <= y; x++){
+                if(x%2 === 0){
+                    pares.push(x);
+                }
+            }
+            
+            return pares;
+        }
+
+        console.log(pares(32, 321));
+    </script>
+</body>
+
+</html>

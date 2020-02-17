@@ -1,0 +1,39 @@
+<!-- 
+    
+1º exercício
+
+Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+aparecer na tela.
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EX01</title>
+</head>
+<body>
+    <div id="container">
+        <input type="button" id="btn" value="Adicionar Quadrado">
+        <div id="section"></div>
+    </div>
+    <script>
+        var btn = document.getElementById('btn');
+
+        btn.onclick = function () {
+            var node = document.createElement('div');
+            node.style.width = '50px';
+            node.style.height = '50px';
+            node.style.background = 'red';
+            node.style.margin = '5px';
+            node.style.float = 'left';
+
+            var section = document.getElementById('section');
+            section.appendChild(node);
+        }
+    </script>
+</body>
+
+</html>

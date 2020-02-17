@@ -1,0 +1,56 @@
+<!-- 
+    
+2º exercício
+
+Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+algum quadrado troque sua cor para uma cor aleatória gerada pela função dada 
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>EX02</title>
+</head>
+<body>
+    <div id="container">
+        <input type="button" id="btn" value="Adicionar Quadrado">
+        <div id="section"></div>
+    </div>
+    <script>
+        // GERA UMA COR ALEATORIA
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        };
+        // ARMAZENA A COR GERADA EM UMA VARIAVEL
+        var newColor = getRandomColor(); // #E943F0
+        // REALIZA A TROCA DE COR DO FUNDO DO QUADRADO
+        function trocarCor(elem){
+            elem.style.background = newColor;
+        }
+
+        document.getElementById('btn').onclick = function () {
+            //alert("opa");
+            var node = document.createElement('div');
+            node.setAttribute('id', 'quad');
+            node.setAttribute('onmouseover', 'trocarCor(this)'); // LISTENER RESPONSÁVEL POR TROCAR A COR DO FUNDO
+            node.style.width = '50px';
+            node.style.height = '50px';
+            node.style.background = 'red';
+            node.style.margin = '5px';
+            node.style.float = 'left';
+
+            var section = document.getElementById('section');
+            section.appendChild(node);
+        };
+
+    </script>
+</body>
+
+</html>
