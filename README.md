@@ -59,7 +59,7 @@ Professor: [Diego Fernandes](https://github.com/diego3g)
 ### 2 - App de ToDos
  * App de ToDos, ou seja, um app de coisas a fazer. 
  * Possui as funções de Adicionar e Remover elemento da lista.
- * A função renderList verifica a modificação na lista e atualia na tela.
+ * A função renderList verifica a modificação na lista e atualiza na tela.
  * A função saveToStorage salva a lista de ToDos no localstorage do navegador.
 ### 3 - JS assíncrono
 * Script1 - Exibe as informações de um usuario github por um acesso GET a API do github usando XMHttpRequest.
